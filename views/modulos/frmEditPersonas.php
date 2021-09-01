@@ -3,6 +3,13 @@ $EditPersonas = new PersonasControlador();
 $repuestaPersonas = $EditPersonas->consultarPersonasControlador();
 $EditPersonas->actualizarPersonasControlador();
 #print_r($repuestaPersonas);
+$estadoMasculino = '';
+$estadoFemenino = '';
+if ($repuestaPersonas['personaGenero'] == 'Masculino') {
+	$estadoMasculino = 'checked';
+}else{
+	$estadoFemenino = 'checked';
+}
 ?>
 <div class="row">
 	<div class="col-4">
@@ -28,7 +35,7 @@ $EditPersonas->actualizarPersonasControlador();
 			<input type="number" class="form-control" name="EditarDoc" value="<?php print $repuestaPersonas['persDocumento']; ?>">
 			<label>Genero</label>
 			<?php 
-			print ' 
+			/*print ' 
 			<select class="form-select" name="Editargenero">
 			<option>Selecione genero</option>
 			<option value = "Masculino" ';
@@ -39,8 +46,12 @@ $EditPersonas->actualizarPersonasControlador();
 			if ($repuestaPersonas['personaGenero'] == 'Femenino')
 				print 'selected';
 			print '>Femenino</option>
-			</select>';
+			</select>';*/
 			?>
+			<br>
+			<input type="radio" name="Editargenero" value="Masculino" <?php print $estadoMasculino?>> Masculino
+			<input type="radio" name="Editargenero" value="Femenino" <?php print $estadoFemenino?>> Femenino
+			<br>
 			<button type="submit" name="ActPersona" class="btn btn-primary mt-3">Actualizar</button>
 		</form>
 	</div>
