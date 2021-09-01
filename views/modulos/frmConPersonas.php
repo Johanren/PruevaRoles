@@ -93,7 +93,7 @@ if (isset($_GET['action'])) {
 			<?php  
 		}
 		?>
-		<table class="table table-success table-striped">
+		<table class="table table-striped">
 			<thead>
 				<tr>
 					<th>Nombre</th>
