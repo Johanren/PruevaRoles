@@ -6,7 +6,10 @@ class EnlacesModelo{
 		if ($enlace == 'inicio' ||
 			$enlace == 'frmRegPersonas'||
 			$enlace == 'frmConPersonas'||
-			$enlace == 'frmEditPersonas') {
+			$enlace == 'frmEditPersonas'||
+			$enlace == 'frmRegUsuario'||
+			$enlace == 'frmConUsuario'||
+			$enlace == 'frmEditUsuario') {
 			$modulo = 'views/modulos/'.$enlace.'.php';
 		}elseif ($enlace == 'index') {
 			$modulo = 'views/template.php';
@@ -29,9 +32,22 @@ class EnlacesModelo{
 		elseif ($enlace == 'acoks'){
 			$modulo = 'views/modulos/frmConPersonas.php';
 		}
+		//InsertarUsuarios
+		elseif ($enlace == 'usoks'){
+			$modulo = 'views/modulos/frmRegUsuario.php';
+		}
+		//Actualizar Usuario
+		elseif ($enlace == 'actoks'){
+			$modulo = 'views/modulos/frmConUsuario.php';
+		}
+		//Eliminar usuario
+		elseif ($enlace == 'delusu'){
+			$modulo = 'views/modulos/frmConUsuario.php';
+		}
 		else{
 			$modulo = 'views/modulos/inicio.php';
 		}
+		
 		
 		return $modulo;
 	}

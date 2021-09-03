@@ -34,20 +34,6 @@ if ($repuestaPersonas['personaGenero'] == 'Masculino') {
 			<label class="label-control">Documento</label>
 			<input type="number" class="form-control" name="EditarDoc" value="<?php print $repuestaPersonas['persDocumento']; ?>">
 			<label>Genero</label>
-			<?php 
-			/*print ' 
-			<select class="form-select" name="Editargenero">
-			<option>Selecione genero</option>
-			<option value = "Masculino" ';
-			if ($repuestaPersonas['personaGenero'] == 'Masculino')
-				print 'selected';
-			print '>Masculino</option>
-			<option value = "Femenino" ';
-			if ($repuestaPersonas['personaGenero'] == 'Femenino')
-				print 'selected';
-			print '>Femenino</option>
-			</select>';*/
-			?>
 			<br>
 			<input type="radio" name="Editargenero" value="Masculino" <?php print $estadoMasculino?>> Masculino
 			<input type="radio" name="Editargenero" value="Femenino" <?php print $estadoFemenino?>> Femenino
