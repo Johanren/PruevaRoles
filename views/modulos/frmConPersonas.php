@@ -90,6 +90,7 @@ if (isset($_GET['action'])) {
 					?>
 				</tbody>
 			</table>
+			<hr><hr>
 			<?php  
 		}
 		?>

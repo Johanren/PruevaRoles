@@ -21,11 +21,12 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="frmRegPersonas">Registrar Personas</a></li>
-            <li><a class="dropdown-item" href="frmConPersonas">Consultar Personas</a></li>
             <li><a class="dropdown-item" href="frmRegUsuario">Registar Usuario</a></li>
-            <li><a class="dropdown-item" href="frmConUsuario">Consultar Usuario</a></li>
+            <li><a class="dropdown-item" href="frmRegRol">Registrar Rol</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="frmConPersonas">Consultar Personas</a></li>
+            <li><a class="dropdown-item" href="frmConUsuario">Consultar Usuario</a></li>
+            <li><a class="dropdown-item" href="frmConRol">Consultar Rol</a></li>
           </ul>
         </li>
         <!--<li class="nav-item">
