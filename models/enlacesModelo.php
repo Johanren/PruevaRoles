@@ -12,7 +12,8 @@ class EnlacesModelo{
 			$enlace == 'frmEditUsuario'||
 			$enlace == 'frmRegRol'||
 			$enlace == 'frmConRol' ||
-			$enlace == 'frmEditRol') {
+			$enlace == 'frmEditRol'||
+			$enlace == 'frmRolesUsuario') {
 			$modulo = 'views/modulos/'.$enlace.'.php';
 		}elseif ($enlace == 'index') {
 			$modulo = 'views/template.php';
@@ -58,6 +59,10 @@ class EnlacesModelo{
 
 		elseif ($enlace == 'okRolElim' || $enlace == 'fallaRolElim') {
 			$modulo = 'views/modulos/frmConRol.php';
+		}
+
+		elseif ($enlace == 'oksRoles' || $enlace == 'fallaRoles') {
+			$modulo = 'views/modulos/frmRolesUsuario.php';
 		}
 
 		else{
