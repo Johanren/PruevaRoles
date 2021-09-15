@@ -22,4 +22,31 @@ class RolesUsuarioModelo extends Conexion{
 			
 		}
 	}
+
+	function listarRolesUsuarioModelo(){
+		$sql = "SELECT * FROM $this->tabla INNER JOIN usuarios ON usuariosroles.idUsuario = usuarios.idUsuario INNER JOIN roles ON usuariosroles.idRol = roles.idRol WHERE 1";
+		try {
+			$conn = new Conexion();
+			$stmt = $conn->conectar()->prepare($sql);
+			$stmt->execute();
+			return $stmt->fetchAll();
+			$stmt->close();
+		} catch (Exception $e) {
+			
+		}
+	}
+
+	function consultarUsuarioModelo($id){
+		$sql = "SELECT * FROM $this->tabla INNER JOIN usuarios ON usuariosroles.idUsuario = usuarios.idUsuario INNER JOIN roles ON usuariosroles.idRol = roles.idRol WHERE usuariosroles.idUsuarioRol = ?";
+		try {
+			$conn = new Conexion();
+			$stmt = $conn -> conectar()->prepare($sql);
+			$stmt->bindParam(1, $id, PDO::PARAM_INT);
+			$stmt->execute();
+			return $stmt->fetchAll();
+			$stmt->close();
+		} catch (Exception $e) {
+			
+		}
+	}
 }

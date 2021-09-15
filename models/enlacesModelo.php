@@ -13,7 +13,9 @@ class EnlacesModelo{
 			$enlace == 'frmRegRol'||
 			$enlace == 'frmConRol' ||
 			$enlace == 'frmEditRol'||
-			$enlace == 'frmRolesUsuario') {
+			$enlace == 'frmRolesUsuario'||
+			$enlace == 'frmConRolesUsuario'||
+			$enlace == 'frmEditarUsuRol') {
 			$modulo = 'views/modulos/'.$enlace.'.php';
 		}elseif ($enlace == 'index') {
 			$modulo = 'views/template.php';

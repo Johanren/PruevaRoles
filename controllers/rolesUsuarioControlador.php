@@ -15,4 +15,17 @@ class RolesUsuarioControlador{
 			}
 		}
 	}
+
+	function listarRolesUsuarioControlador(){
+		$listarRolesUsuario = new RolesUsuarioModelo();
+		$respuesta = $listarRolesUsuario->listarRolesUsuarioModelo();
+		return $respuesta;
+	}
+
+	function consultarUsuarioControlador(){
+		$id = $_GET['id'];
+		$consultar = new RolesUsuarioModelo();
+		$respuesta = $consultar->consultarUsuarioModelo($id);
+		return $respuesta;
+	}
 }

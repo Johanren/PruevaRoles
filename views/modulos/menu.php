@@ -28,7 +28,7 @@
             <li><a class="dropdown-item" href="frmConPersonas">Consultar Personas</a></li>
             <li><a class="dropdown-item" href="frmConUsuario">Consultar Usuario</a></li>
             <li><a class="dropdown-item" href="frmConRol">Consultar Rol</a></li>
-            <li><a class="dropdown-item" href="frmRegRol">Consultar Perfil</a></li>
+            <li><a class="dropdown-item" href="frmConRolesUsuario">Consultar Perfil</a></li>
           </ul>
         </li>
         <!--<li class="nav-item">
